@@ -1,0 +1,10 @@
+{{input value=partyCount}}
+
+{{#if locationFound}}
+  <button {{action "beginSearch"}}>GO!</button>
+{{/if}}
+
+{{#if locationFound}}
+  {{google-map class="map-container"}}
+{{/if}}
+

@@ -2,8 +2,20 @@
 
 module.exports = function(environment) {
   var ENV = {
+    googleMap: {
+      apiKey: 'AIzaSyAz0l6x1gaD-gTHvNpEe7e31QWnl-Ob8-U',
+      libraries: ['places', 'geocode']
+    },
+    googleFonts: [
+      'Lato:700,300italic',
+      'Oswald:700,300'
+    ],
     modulePrefix: 'rezy-front',
     environment: environment,
+    contentSecurityPolicy: {
+      'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com, *.googleusercontent.com"
+    },
+    firebase: 'https://rezy-production.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
